@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highmark Cabinet Doors | Styles Change... Quality Remains</title>
+    <style>
+        /* Updated Earthy/Woodworking Color Scheme */
+        :root {
+            --primary-color: #3b2f2f; /* Deep Wood Brown */
+            --secondary-color: #8b5a2b; /* Rich Oak/Caramel Accent */
+            --light-bg: #f4f1ea; /* Soft Beige/Cream */
+            --text-dark: #2c2c2c;
+            --text-light: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+
+        /* Navigation & Sticky Header (The "Pop Up" Area) */
+        header {
+            background-color: #ffffff; /* White background to make the logo pop */
+            color: var(--primary-color);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Styling for the Original Logo */
+        header .logo-container img {
+            max-height: 60px; /* Adjust this to fit your logo perfectly */
+            width: auto;
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-phone {
+            background: var(--secondary-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .contact-phone:hover {
+            background: #6b431e;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Keep the background image or replace with your own workshop/product image */
+            background: linear-gradient(rgba(59, 47, 47, 0.85), rgba(59, 47, 47, 0.85)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #eaeaea;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            background: var(--secondary-color);
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #6b431e;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 10%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 5rem 10%;
+            background-color: var(--light-bg);
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .card-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 4rem 10% 2rem 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-col img {
+            max-height: 50px;
+            margin-bottom: 15px;
+            /* Invert colors or add brightness if logo is dark and footer is dark */
+            filter: brightness(0) invert(1); 
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .footer-col p, .footer-col a {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #d1cfc9;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .footer-col a:hover {
+            color: var(--text-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background: #2a2121;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <!-- REPLACE THE SRC LINK BELOW WITH THE EXACT LINK TO YOUR ORIGINAL LOGO -->
+            <a href="#home">
+                <img src="https://highmarkcabinetdoors.com/wp-content/uploads/your-logo-file.png" alt="Highmark Doors Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="tel:6048570484" class="contact-phone">Call: (604) 857-0484</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Styles Change... Quality Remains</h1>
+        <p>Providing cabinet makers with premium wood production products, quick lead times, and unmatched consistency since 1998.</p>
+        <a href="#contact" class="btn">Get a Quote Today</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>The HighMark Standard</h2>
+        <p>Founded in 1998, HighMark Cabinet Doors Ltd. started as a small two-man shop. Today, we are a pioneer in wood production products. Our specialties continue to grow, providing the exact products and services you need to help your cabinet-making business succeed.</p>
+        <p><strong>Your business will benefit from our experienced craftsmen and our quick, consistent lead times.</strong></p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Our Premium Offerings</h2>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="card">
+                <h3>Cabinet Doors</h3>
+                <p>We feature a diverse list of door styles and profiles including flat panel, raised panel, and custom doors. Be sure to ask about our featured 1-inch shallow shaker door.</p>
+                <a href="#contact" class="card-link">Learn More &rarr;</a>
+            </div>
+            <!-- Product 2 -->
+            <div class="card">
+                <h3>Dovetail Drawers</h3>
+                <p>Custom drawers and components crafted with a traditional hand-sanded finish to all edges. Available in your choice of premium finishes.</p>
+                <a href="#contact" class="card-link">Learn More &rarr;</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="card">
+                <h3>Countertops & Cutting Boards</h3>
+                <p>Expertly crafted custom wooden countertops and durable cutting boards designed to elevate any kitchen space.</p>
+                <a href="#contact" class="card-link">Learn More &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-col">
+            <!-- Duplicate Logo in Footer for Branding -->
+            <img src="https://highmarkcabinetdoors.com/wp-content/uploads/your-logo-file.png" alt="Highmark Doors Logo">
+            <p>Quality custom wood products for cabinet makers.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <p><strong>Phone:</strong> (604) 857-0484</p>
+            <p><strong>Address:</strong><br>4848 275 St #101B<br>Langley, BC V4W 0A3</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#products">Cabinet Doors</a>
+            <a href="#products">Dovetail Drawers</a>
+            <a href="#products">Countertops</a>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        &copy; 2026 HighMark Cabinet Doors Ltd. All Rights Reserved.
+    </div>
+
+</body>
+</html>
